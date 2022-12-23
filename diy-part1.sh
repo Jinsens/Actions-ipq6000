@@ -15,4 +15,15 @@
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
+#echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
+
+
+
+
+
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-app-argon-config.git package/lean/luci-app-argon-config
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+
+sed -i '$a src-git kenzo https://github.com/xiaomeng9597/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
